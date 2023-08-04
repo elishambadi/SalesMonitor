@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>All Calls</h1>
+  <ul>
+    {% for call in calls %}
+      <li><a href="{% url 'call_detail' call.id %}">{{ call.call_type }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

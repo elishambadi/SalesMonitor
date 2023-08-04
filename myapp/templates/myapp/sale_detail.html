@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Sale Detail</h1>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>ID:</td>
+        <td>{{ sale.id }}</td>
+      </tr>
+      <tr>
+        <td>Customer:</td>
+        <td>{{ sale.customer }}</td>
+      </tr>
+      <tr>
+        <td>Call Type:</td>
+        <td>{{ sale.call.call_type }}</td>
+      </tr>
+      <tr>
+        <td>Channel:</td>
+        <td>{{ sale.channel.channel_type }}</td>
+      </tr>
+      <tr>
+        <td>Representative:</td>
+        <td>{{ sale.representative.name }}</td>
+      </tr>
+      <tr>
+        <td>Value:</td>
+        <td>{{ sale.value }}</td>
+      </tr>
+      <tr>
+        <td>Date:</td>
+        <td>{{ sale.date }}</td>
+      </tr>
+      <tr>
+        <td>Region:</td>
+        <td>{{ sale.region }}</td>
+      </tr>
+      <tr>
+        <td>Amount:</td>
+        <td>{{ sale.amount }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'sale_list' %}" class="btn btn-primary">Back to List</a>
+{% endblock %}
+

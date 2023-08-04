@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Call Details</h1>
+  <p><strong>Call Type:</strong> {{ call.call_type }}</p>
+  <p><strong>Call Category:</strong> {{ call.call_category }}</p>
+  <!-- Add more details as needed -->
+  <a href="{% url 'call_list' %}">Back to All Calls</a>
+{% endblock %}

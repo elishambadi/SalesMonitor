@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Payment Detail</h1>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>ID:</td>
+        <td>{{ payment.id }}</td>
+      </tr>
+      <tr>
+        <td>Amount:</td>
+        <td>{{ payment.amount }}</td>
+      </tr>
+      <tr>
+        <td>Payment Mode:</td>
+        <td>{{ payment.payment_mode }}</td>
+      </tr>
+      <tr>
+        <td>Payment Code:</td>
+        <td>{{ payment.payment_code }}</td>
+      </tr>
+      <tr>
+        <td>Cheque Date:</td>
+        <td>{{ payment.cheque_date|default:"None" }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'payment_list' %}" class="btn btn-primary">Back to List</a>
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Channel Detail</h1>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>ID:</td>
+        <td>{{ channel.id }}</td>
+      </tr>
+      <tr>
+        <td>Channel Type:</td>
+        <td>{{ channel.channel_type }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'channel_list' %}" class="btn btn-primary">Back to List</a>
+{% endblock %}

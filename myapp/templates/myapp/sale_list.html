@@ -1,0 +1,11 @@
+<!-- sale_list.html -->
+<h1>Sale List</h1>
+<ul>
+  {% for sale in sales %}
+    <li>
+      <a href="{% url 'sale_detail' sale.id %}">Sale ID: {{ sale.id }}</a>
+    </li>
+  {% empty %}
+    <li>No sales found.</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,26 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome to SalesMonitor!</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <a href="{% url 'customer_list' %}" class="btn btn-primary btn-lg">Manage Customers</a>
+      <a href="{% url 'customer_create' %}" class="btn btn-success btn-lg">Create Customer</a>
+    </div>
+    <div class="col-md-6">
+      <a href="{% url 'view_sales' %}" class="btn btn-primary btn-lg">Manage Sales</a>
+      <a href="{% url 'add_sale' %}" class="btn btn-success btn-lg">Create Sale</a>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <a href="{% url 'view_payments' %}" class="btn btn-primary btn-lg">Manage Payments</a>
+      <a href="{% url 'add_payment' %}" class="btn btn-success btn-lg">Create Payment</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

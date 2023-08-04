@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Representative Detail</h1>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>ID:</td>
+        <td>{{ representative.id }}</td>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td>{{ representative.name }}</td>
+      </tr>
+      <tr>
+        <td>Phone:</td>
+        <td>{{ representative.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="{% url 'representative_list' %}" class="btn btn-primary">Back to List</a>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Channel List</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Channel Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for channel in channels %}
+        <tr>
+          <td>{{ channel.id }}</td>
+          <td>{{ channel.channel_type }}</td>
+          <td>
+            <a href="{% url 'channel_detail' channel.id %}" class="btn btn-primary">View</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
